@@ -1,9 +1,67 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Data Visualization Dashboard
+
+A modern, interactive data visualization platform built with Next.js, designed for analyzing and exploring complex datasets similar to microbiome data platforms.
+
+## Features
+
+### 📊 Interactive Visualizations
+- **Bar Charts**: Perfect for comparing categorical data and diversity indices
+- **Line Charts**: Ideal for time series analysis and temporal trends
+- **Pie Charts**: Great for showing composition and distribution
+- **Data Tables**: Sortable, searchable tables with export functionality
+
+### 🎨 Modern UI/UX
+- Responsive design that works on all devices
+- Clean, professional interface with Tailwind CSS
+- Accessible components built with Radix UI
+- Smooth transitions and micro-interactions
+
+### 🔧 Technical Features
+- **Search & Filter**: Real-time data filtering across all visualizations
+- **Export Options**: Download data as CSV from tables
+- **Sortable Tables**: Click column headers to sort data
+- **Mobile Navigation**: Hamburger menu for mobile devices
+
+### 📱 Dashboard Sections
+- **Overview**: Key metrics and summary visualizations
+- **Microbiome Analysis**: Detailed breakdown of microbial communities
+- **Time Series**: Population dynamics and temporal analysis
+- **Data Table**: Browseable and searchable sample database
+- **Settings**: Configure visualization preferences
+
+## Tech Stack
+
+- **Framework**: Next.js 16 with TypeScript
+- **Styling**: Tailwind CSS
+- **Charts**: Recharts
+- **UI Components**: Radix UI + Custom components
+- **Icons**: Lucide React
+- **Build Tool**: Turbopack
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
 
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/pkrawi3/react_data_viz.git
+cd react_data_viz
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
@@ -14,20 +72,52 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+├── app/                    # Next.js app directory
+│   ├── globals.css        # Global styles and CSS variables
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Main dashboard page
+├── components/            # React components
+│   ├── ui/               # Reusable UI components
+│   ├── charts/           # Chart components
+│   ├── Navigation.tsx    # Main navigation
+│   └── DataTable.tsx     # Interactive data table
+├── data/                 # Sample data
+│   └── sampleData.ts     # Mock microbiome data
+└── lib/                  # Utility functions
+    └── utils.ts          # Helper functions
+```
+
+## Customization
+
+### Adding New Charts
+1. Create a new component in `components/charts/`
+2. Use Recharts for consistent styling
+3. Import and use in `app/page.tsx`
+
+### Modifying Data
+Update `data/sampleData.ts` to use your own datasets:
+- Update the data structures
+- Modify table columns in `tableColumns`
+- Adjust chart data accordingly
+
+### Styling
+- Modify `app/globals.css` for global styles
+- Use Tailwind classes for component styling
+- CSS variables are defined for consistent theming
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about the technologies used:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API
+- [Recharts Documentation](https://recharts.org/) - powerful charting library
+- [Tailwind CSS](https://tailwindcss.com/) - utility-first CSS framework
+- [Radix UI](https://www.radix-ui.com/) - accessible UI components
 
 ## Deploy on Vercel
 
