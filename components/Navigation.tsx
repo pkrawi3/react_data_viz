@@ -27,7 +27,7 @@ export function Navigation({ activeTab, onTabChange }: NavigationProps) {
           <div className="flex items-center">
             <div className="flex-shrink-0 flex items-center">
               <Database className="h-8 w-8 text-blue-600 mr-3" />
-              <h1 className="text-xl font-bold text-gray-900">DataViz Platform</h1>
+              <h1 className="text-xl font-bold text-gray-900">Emilia's Visualizer</h1>
             </div>
             <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
               {navigationItems.map((item) => {
